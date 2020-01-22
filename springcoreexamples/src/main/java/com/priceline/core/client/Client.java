@@ -11,8 +11,8 @@ public class Client {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
-                //new ClassPathXmlApplicationContext("application-configuration.xml");
+                //new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+                new ClassPathXmlApplicationContext("application-configuration.xml");
         Merchant merchant = applicationContext.getBean("merchant", Merchant.class);
         merchant.performTransaction("Vikas", 20_000, "Purchasing IPad Mini");
 

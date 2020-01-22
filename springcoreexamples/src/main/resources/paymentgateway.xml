@@ -3,6 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="amazonPay" class="com.priceline.core.service.AmazonPay" init-method="customInitialization" destroy-method="customDestruction"/>
+    <bean id="amazonPay" class="com.priceline.core.service.AmazonPay"
+          init-method="customInitialization"
+          scope="prototype"
+          destroy-method="customDestruction"/>
 
 </beans>

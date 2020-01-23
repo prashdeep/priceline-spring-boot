@@ -17,6 +17,7 @@ public class SpringSecurityConfiguration  extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.cors().disable();
+        http.headers().frameOptions().disable();
         http.authorizeRequests()
                 .antMatchers("/api/**")
                 .hasAnyRole("USER", "ADMIN")

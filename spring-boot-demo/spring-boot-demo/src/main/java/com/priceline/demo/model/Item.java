@@ -3,8 +3,10 @@ package com.priceline.demo.model;
 import lombok.*;
 import org.hibernate.validator.constraints.Range;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+
 
 @Setter
 @Getter
@@ -13,10 +15,15 @@ import java.io.Serializable;
 @EqualsAndHashCode(of = "id")
 @ToString
 @Builder
+@Entity
+@Table(name = "item")
 public class Item implements Serializable, Comparable<Item> {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(name = "item_name", unique = true)
     @NotBlank(message = "Name cannot be blank")
     private String name;
     @NotBlank(message = "description cannot be blank")

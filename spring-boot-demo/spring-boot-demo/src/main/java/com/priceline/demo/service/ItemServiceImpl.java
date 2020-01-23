@@ -3,11 +3,13 @@ package com.priceline.demo.service;
 
 import com.priceline.demo.dao.ItemDao;
 import com.priceline.demo.model.Item;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Profile("qa")
 public class ItemServiceImpl implements ItemService {
 
     private final ItemDao itemDao;

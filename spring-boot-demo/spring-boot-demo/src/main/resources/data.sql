@@ -1,4 +1,3 @@
-use emp_db;
 
 insert into user(user_id, user_name, password)
 		values
@@ -10,7 +9,7 @@ insert into role (role_id, role)
      (1, 'USER'),
      (2, 'ADMIN');
 
-insert into users_roles (user_id, role_id)
+insert into user_roles (user_id, role_id)
     values
     (1,1),
     (2, 2);

@@ -14,9 +14,6 @@ Day2 Agenda
 - Commanline runner
 - Deploying as war file 
 
-- Unit Testing
-- Integration testing 
-  
 - Microservices 
 - Components of Microservices
 - Spring Cloud components
